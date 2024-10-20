@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+
+.volume-div {
+    width: 200px;
+    height: 200px;
+    background-color: azure;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+body {
+   background-color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.back-body  {
+    top: -320px;
+    position: fixed;
+    animation: animation 3s infinite ease-in-out;
+    z-index: -1;
+    filter: blur(2px);
+    
+}
+
+ @keyframes animation{
+    0%{
+        background-position: 0 50px;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.top-strip {
+    z-index: 1000;
+    top: 0px;
+    position: sticky;
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.top-strip img{
+   margin-right: auto;
+
+}
+
+
+
+h3 {
+    margin: 10px;
+    margin-left: 125px;
+    margin-right: 110px;
+    color: rgb(255, 246, 246);
+}
+
+.teks {
+    position: absolute;
+    top: 3.0px;
+    margin-left: 15rem;
+    font-size: 17px;
+    color: #fff;
+    z-index: 2;
+    text-align: left;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 0px;
+}
+
+
+.img {
+    border-radius: 15px 50px;
+    box-shadow: 5px 5px 8px black;
+    position: relative;
+    left: 4%;
+    width: 165px;
+    height: 233px;
+    margin-right: 500px;
+}
+
+
+
+.box {
+    background-size: cover;
+    background-color: #574141d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 300px;
+    margin: 95px;
+    border: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px black;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-400%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+.audio-button {
+    background: url('logo_spiker.png') no-repeat center center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.sound-icon {
+    position: absolute;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    left: 10px;
+    top: 10px;
+}
